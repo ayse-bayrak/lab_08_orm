@@ -3,12 +3,16 @@ package com.cydeo.entity;
 import com.cydeo.enums.CartState;
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.List;
 
 @Entity
 @Data
+@Getter
+@Setter
 @NoArgsConstructor
 public class Cart extends BaseEntity{
 
@@ -21,9 +25,8 @@ public class Cart extends BaseEntity{
     @ManyToOne
     private Discount discount;
 
-    @OneToOne
-    private Order order;
-
+//    @OneToOne
+//    private Order order;  // lab_09_query it does not, it is no necesaary because in the table it is not.
 
     @ManyToMany
     @JoinTable(name = "product_category_rel",
