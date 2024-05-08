@@ -5,12 +5,16 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.math.BigDecimal;
 
 @Entity
 @Data
+@Getter
+@Setter
 @NoArgsConstructor
 public class Payment extends BaseEntity{
     private BigDecimal paidPrice;

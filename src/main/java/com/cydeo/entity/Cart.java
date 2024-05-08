@@ -25,9 +25,6 @@ public class Cart extends BaseEntity{
     @ManyToOne
     private Discount discount;
 
-//    @OneToOne
-//    private Order order;  // lab_09_query it does not, it is no necesaary because in the table it is not.
-
     @ManyToMany
     @JoinTable(name = "product_category_rel",
             joinColumns = @JoinColumn(name="p_id"),

@@ -1,9 +1,6 @@
 package com.cydeo.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.OneToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -24,6 +21,6 @@ public class Balance extends BaseEntity {
     //first part general total digits of numbers, second part how many numbers you see after main amount
 
     @OneToOne
-    @Column(name = "customer_id") // it is better to write like this
+    //@JoinColumn(name = "customer_id") // it is better to write like this
     private Customer customer;
 }

@@ -12,10 +12,6 @@ import java.util.List;
 public class Category extends BaseEntity{
 
     private String name;
-    //burada kaldim product_category_rel yapamadim
-//    @OneToMany(mappedBy = "product_list")
-//    private List<Product> product;
-
 
     @ManyToMany
     @JoinTable(name = "product_category_rel",
