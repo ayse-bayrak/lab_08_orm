@@ -10,7 +10,6 @@ import lombok.Setter;
 import java.util.List;
 
 @Entity
-@Data
 @Getter
 @Setter
 @NoArgsConstructor
@@ -20,10 +19,10 @@ public class Cart extends BaseEntity{
     private CartState cartState;
 
     @ManyToOne
-    private Customer customer;
+    private Discount discount;
 
     @ManyToOne
-    private Discount discount;
+    private Customer customer;
 
     @ManyToMany
     @JoinTable(name = "product_category_rel",

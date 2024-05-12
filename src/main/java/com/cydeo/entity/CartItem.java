@@ -10,11 +10,10 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Data
 @NoArgsConstructor
 public class CartItem extends BaseEntity{
 
-    private int quantity;
+    private Integer quantity;
 
     @ManyToOne
     private Cart cart;

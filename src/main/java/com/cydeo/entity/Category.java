@@ -2,29 +2,26 @@ package com.cydeo.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.List;
 
 @Entity
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 public class Category extends BaseEntity{
 
     private String name;
 
-    @ManyToMany
-    @JoinTable(name = "product_category_rel",
-            joinColumns = @JoinColumn(name="c_id"),
-            inverseJoinColumns = @JoinColumn(name="p_id"))
-    private List<Product> productList;
+    private List<Product> productList;//1000000
 
-    /*
+}
+/*
     Bağlantı Tablosu Kullanarak (Join Table): Birçok-çok (many-to-many) ilişkilerde kullanılır.
     İki tablo arasındaki ilişkiyi temsil etmek için bir bağlantı tablosu oluşturulur.
     Bu tablo, her iki tablonun anahtarlarını içerir
     ve her iki tablo arasındaki ilişkiyi tanımlar.
      */
-
-
-}
