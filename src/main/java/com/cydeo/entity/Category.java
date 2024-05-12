@@ -16,7 +16,7 @@ public class Category extends BaseEntity{
 
     private String name;
 
-    private List<Product> productList;//1000000
+    //private List<Product> productList;//1000000
 
 }
 /*
